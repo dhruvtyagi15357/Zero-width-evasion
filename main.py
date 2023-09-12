@@ -23,11 +23,13 @@ def mainn():
             print("Operation successful!")
 
         elif op == '2':
-            entire_file_with_hidden_secret = fio.read_message("extract_input.txt")
+            input_file_name = input("Enter the name of the file from which you want to extract the hidden string")
+            entire_file_with_hidden_secret = fio.read_message(input_file_name)
             hidden_message_binary = con.find_hidden_message(entire_file_with_hidden_secret)
             hidden_message_hex = con.extract_hex(hidden_message_binary)
             hidden_message = binascii.unhexlify(hidden_message_hex).decode()
-            fio.write_message(hidden_message, "extract_secret.txt")
+            output_file_name = input("Enter the name of the output file.")
+            fio.write_message(hidden_message, output_file_name)
             
         else:
             print("wrong choice!")
