@@ -7,8 +7,8 @@ import conversions as con
 def mainn():
     i = 'y'
     while i == 'y':
-        print("1. Hide the payload.txt \'s content in output.txt using input_cover.txt \'s contents")
-        print("2. Extract the hidden secret contents from input.txt and store the secret in secret.txt and remaining content in input.txt")
+        print("1. Hide the secret file content\'s content in cover file")
+        print("2. Extract the hidden secret contents from input file and store the secret in output file")
         op = input("Select an option:")
         if op == '1':
             input_file_cover = input("Enter the name of the cover file: ")
